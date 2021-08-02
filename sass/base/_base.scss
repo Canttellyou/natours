@@ -1,0 +1,37 @@
+//This defines what 1rem is
+html {
+  font-size: 62.5%; //1 rem=10px; 10px/16px=62.5%
+  @include respond(big-desktop) {
+    font-size: 62.5%;
+  }
+  @include respond(tab-land) {
+    font-size: 56.25%;
+  }
+  @include respond(tab-port) {
+    font-size: 50%;
+  }
+}
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+body {
+  @include respond(tab-port) {
+    padding: 0;
+  }
+
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.7;
+  color: #777;
+  padding: 3rem;
+  box-sizing: border-box;
+}
+::selection {
+  background-color: $color-primary;
+  color: white;
+}

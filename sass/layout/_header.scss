@@ -1,0 +1,75 @@
+.header {
+  height: 95vh;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-primary-light, 0.8),
+      rgba($color-primary-dark, 0.8)
+    ),
+    url("../img/hero-small.jpg");
+  background-size: cover;
+  background-position: top;
+  position: relative;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  @media only screen and (min-resolution: 192dpi) and (min-width: 600px) {
+    background-image: linear-gradient(
+        to right bottom,
+        rgba($color-orange-light, 0.8),
+        rgba($color-orange-dark, 0.8)
+      ),
+      url("../img/hero.jpg");
+  }
+
+  @include respond(phone) {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+  }
+  &__logo-box {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+  }
+  &__logo {
+    height: 35px;
+  }
+  &__logo-box:hover {
+    animation: moveInLeft 3s ease-out;
+  }
+}
+
+.heading-primary {
+  color: $color-primary-white;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+
+  &--main {
+    @include respond(phone) {
+      letter-spacing: 1rem;
+      font-family: 5rem;
+    }
+    display: block;
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 3.5rem;
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+  }
+  &--sub {
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 17.26px;
+    animation: moveInRight 1s ease-out;
+    margin-bottom: 60px;
+
+    @include respond(phone) {
+      letter-spacing: 0.5rem;
+    }
+  }
+  .header-tertiary {
+    font-size: $default-text-size;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+}
