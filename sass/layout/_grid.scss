@@ -12,6 +12,9 @@
     max-width: 50rem;
     padding: 0 3rem;
   }
+  @include respond(tab-mid) {
+    padding: 0 3rem;
+  }
   @include clearfix;
   [class^="col-"] {
     float: left;

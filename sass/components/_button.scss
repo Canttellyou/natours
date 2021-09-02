@@ -61,23 +61,24 @@
 }
 .btn-text {
   &:link,
-  &:visited {
+  &:visited,
+  &:active {
     font-size: $default-text-size;
     text-decoration: none;
     color: $color-primary-dark;
+    border: none;
     border-bottom: 1px solid $color-primary-dark;
     display: inline-block;
-    padding: 3px;
+    padding: 1rem;
     transition: all 0.2s;
   }
   &:hover {
-    font-size: $default-text-size;
     color: $color-primary-white;
     background-color: $color-primary-dark;
     text-decoration: none;
-    padding: 1.5px;
+    padding: 1rem;
     border-radius: 2.5px;
-    transform: translateY(-3px);
+    transform: translateY(-2px);
     box-shadow: 0px 10px 20px $color-black;
   }
 
